@@ -10,7 +10,7 @@ set -eo pipefail
 CONDA_PATH="/home/ubuntu/miniconda3"
 VLX_BRANCH="master"
 ENV_DIR="/tmp/vlx"
-export CONDA_PKGS_CHANNELS_ACCEPT=1
+
 
 # --- Parse arguments ---
 while getopts "b:e:h" current_opt; do
@@ -50,6 +50,9 @@ bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm ~/miniconda3/miniconda.sh
 
 source ~/miniconda3/bin/activate
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+
 conda init --all
 source ~/.bashrc
 
