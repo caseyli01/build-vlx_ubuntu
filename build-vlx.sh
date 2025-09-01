@@ -7,7 +7,7 @@
 set -eo pipefail
 
 
-CONDA_PATH="/home/ubuntu/miniconda3/bin/conda"
+CONDA_PATH="/home/ubuntu/miniconda3"
 VLX_BRANCH="master"
 ENV_DIR="/tmp/vlx"
 export CONDA_PKGS_CHANNELS_ACCEPT=1
